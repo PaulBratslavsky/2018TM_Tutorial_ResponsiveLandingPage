@@ -1,0 +1,68 @@
+// Wide Screens XL
+@include mediaXl {
+
+}
+
+// Desktops and Laptops
+@include mediaLg {
+    
+}
+
+// Ipads and Tablets
+@include mediaMd {
+    main#home {
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+
+        h1.lg-heading {
+                line-height: 1;
+                margin-bottom: 1rem;
+                font-size: 4rem;
+                color: paleturquoise;
+                margin-top: 35vh;
+        }
+            
+    }
+
+    ul.menu-nav, 
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate(0, 0, 0)
+        }
+        
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate(100%, 0, 0);
+        .portrait {
+            height: 175px;
+            width: 175px;
+            background-position: center;
+        }
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    main#home {
+        padding: 10px; 
+
+        h1.lg-heading {
+            margin-top: 30vh;
+            font-size: 3.2rem;
+            color: pink;
+        }
+    }
+}
