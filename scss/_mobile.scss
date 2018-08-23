@@ -1,6 +1,8 @@
 // Wide Screens XL
 @include mediaXl {
 
+
+
 }
 
 // Desktops and Laptops
@@ -8,52 +10,64 @@
     
 }
 
-// Ipads and Tablets
+
+
+// Tablets & Small Laptops
 @include mediaMd {
-    main#home {
-        align-items: center;
-        text-align: center;
-        padding: 40px;
-
-        h1.lg-heading {
-                line-height: 1;
-                margin-bottom: 1rem;
-                font-size: 4rem;
-                color: paleturquoise;
-                margin-top: 35vh;
-        }
-            
+    main {
+      align-items: center;
+      text-align: center;
+  
+      .lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
     }
-
-    ul.menu-nav, 
+  
+    ul.menu-nav,
     div.menu-branding {
-        float: none;
-        width: 100%;
-        min-height: 0;
-
-        &.show {
-            transform: translate(0, 0, 0)
-        }
-        
+      float: none;
+      width: 100%;
+      min-height: 0;
+  
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
     }
-
+  
     .menu-nav {
-        height: 75vh;
-        transform: translate(-100%, 0, 0);
-        font-size: 24px;
+      height: 75vh;
+      transform: translate3d(-100%, 0, 0);
+      font-size: 24px;
     }
-
+  
     .menu-branding {
-        height: 25vh;
-        transform: translate(100%, 0, 0);
-        .portrait {
-            height: 175px;
-            width: 175px;
-            background-size: cover;
-        }
+      height: 25vh;
+      transform: translate3d(100%, 0, 0);
+  
+      .portrait {
+        background: url('../img/portrait_small.jpg');
+        width: 150px;
+        height: 150px;
+      }
     }
-}
-
+  
+    .about-info {
+      grid-template-areas:
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+  
+      grid-template-columns: 1fr;
+    }
+  
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
 // Smartphones
 @include mediaSm {
     main#home {
@@ -62,7 +76,6 @@
         h1.lg-heading {
             margin-top: 30vh;
             font-size: 3.2rem;
-            color: pink;
         }
     }
 }
