@@ -1,13 +1,23 @@
 // Wide Screens XL
 @include mediaXl {
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+    img {
+      height: 320px;
+    }
+  }
 
 
 }
 
 // Desktops and Laptops
 @include mediaLg {
-    
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    img {
+      height: 320px;
+    }
+  }
 }
 
 
@@ -101,5 +111,9 @@
             margin-top: 30vh;
             font-size: 3.2rem;
         }
+    }
+
+    .projects {
+      grid-template-columns: 1fr;
     }
 }
